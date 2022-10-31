@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Audio Analysis</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div style = "
+        height:auto; 
+        justify-content: left;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+
+        ">
+        <h1>Speech Analysis</h1>
+        <h3>Upload Audio/Video:</h3>
+        <form 
+        action="/" method="POST" enctype="multipart/form-data">
+            <input type="file" name="audio">
+            
+            <input type="submit">
+        </form>
+        {% if translation %}
+            <p style="font-size: x-small;">(only the first 30 seconds)</p>
+            <h3>Report</h3>
+            <div style="align-items: left;">
+            <p><b>Transcript:</b> "{{ translation }}"</p>
+            <p><b>The grammatical accuracy:</b> {{ accuracy }}</p>
+            <p><b>Incorrect words:</b> {{ incorrect_words }}</p>
+            </p>
+            <p><b>The phonetics of the text:</b> {{ phonetics }}</h3>
+            <p><b>Approximate Stutter Count:</b> {{ stutters }}</h3>
+
+            </div>
+        {% endif %}
+        </div>
+        
+    </body>
+</html>
