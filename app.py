@@ -10,6 +10,10 @@ import os
 import moviepy.editor as mp
 import eng_to_ipa as ipa
 
+
+# Using Wav2Vec2 model for speech recognition as training a good model for general ASR from scratch is not possible due to the time constraint!
+
+
 tokenizer = Wav2Vec2Tokenizer.from_pretrained("facebook/wav2vec2-base-960h")
 model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-base-960h")
 
