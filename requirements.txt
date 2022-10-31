@@ -10,9 +10,6 @@ black==19.10b0
 brotlipy==0.7.0
 cchardet==2.1.7
 certifi==2021.10.8
-conda==4.12.0
-conda-build==3.21.8
-conda-verify==3.4.2
 constantly==15.1.0
 cssselect==1.1.0
 cytoolz==0.11.0
