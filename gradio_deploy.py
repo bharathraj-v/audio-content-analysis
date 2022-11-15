@@ -1,3 +1,7 @@
+## Deploying in Heroku was not possible due to the memory usage. So,
+## gradio was chosen
+
+
 import nltk
 import librosa
 import torch
